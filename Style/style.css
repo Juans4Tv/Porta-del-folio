@@ -1,0 +1,167 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*no olvidar de las unidades de medidas a la hora de hacer utilizar otro que no sea PX*/
+:root{
+    --color-primario:#000000;
+    --color-secundario:#F6F6F6;
+    --color-terciario:#22D4FD;
+    --trazo-color:#272727;
+
+    --fuente-monserrate:"Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    /*pocisionar bien el body*/
+    /*height: 100vh;*/
+
+    box-sizing: border-box;
+}
+
+
+.titulo-dedestaque{
+    color: var(--color-terciario);
+}
+
+.div1{
+    /*eje x*/
+    width: 100px;
+    /*eje y*/
+    height: 50px;
+    /*grosor del las lineas*/
+    border: solid blue 2px;
+    /*movimiento dentro del recuadro creo*/
+    padding: 50px;
+
+    box-sizing: border-box;
+    box-sizing: content-box;
+}
+/*presentacion y organizacion del datos*/
+.presentacion{
+    /*organiza el items de linea*/
+    display: flex;
+    /*alinea los items en el centro*/
+    align-items: center;
+    gap: 96px;
+
+    justify-content: space-between;
+
+    padding: 5% 15%;
+
+}
+.presentacionPortafolio{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /*separacion de contenidos*/
+    gap: 40px;
+
+}
+.presentacionTitulo{
+    font-family: var(--fuente-krona);
+    font-size: 2.25rem;
+}
+.presentacionTexto{
+    font-family: var(--fuente-monserrate);
+    font-size: 1.5rem;
+}
+.organizarEnlaces{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+}
+.boton{
+/*tamaño del boton*/
+ width: 50%;
+ /*color del boton*/
+ background-color: var(--color-primario);
+ /*espaciado entre linea*/
+ padding: 21.5px 0;
+ text-align: center;
+ border: solid var(--color-terciario) 2px;
+ border-radius: 8px;
+ color: var(--color-secundario);
+ text-decoration: none;
+ font-family: var(--fuente-monserrate);
+ font-size: 1.5rem;
+ font-weight: 600;
+
+ /*organiza los iconos con las letras*/
+ display: flex;
+ justify-content: center;
+ gap: 10px;
+}
+
+.tituloAcesso{
+    color: var(--color-secundario);
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/*El hover se utiliza para seleccionar elementos cuando pasas el ratón sobre ellos.*/
+.boton:hover{
+    background-color: var(--trazo-color);
+
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 26px;
+    text-align: center;
+    color: var(--color-primario);
+    font-family: var(--fuente-monserrate);
+    font-size: 1.5rem;
+}
+
+.header{
+    /*padding-top
+    padding-right
+    padding-bottom
+    padding-left*/
+    padding: 2% 0% 0% 15%;
+    
+}
+.header_nav{
+
+    display: flex;
+    gap: 80px;
+
+
+}
+.link{
+    font-family: var(--fuente-monserrate);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.imagen{
+    width: 50%;
+}
+
+@media(max-width: 1200px){
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .header{
+       padding: 10%;
+    }
+    .header_nav{
+        justify-content: center;
+    }
+    .presentacionPortafolio{
+        width: auto;
+    }
+}
